@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\SeaBattleContext.cs" />
+    <Compile Include="Model\Battlefield.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

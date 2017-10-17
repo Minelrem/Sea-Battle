@@ -14,6 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using SeaBattle.Controls;
+using SeaBattle.Data.Context;
+using SeaBattle.Data.Model;
+using System.Xml.Linq;
 
 namespace SeaBattle
 {
@@ -22,9 +25,14 @@ namespace SeaBattle
     /// </summary>
     public partial class MainWindow : Window
     {
+
+       private static SeaBattleContext _db_context = new SeaBattleContext();
+
         public MainWindow()
         {
             InitializeComponent();
+ 
+
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -55,6 +63,12 @@ namespace SeaBattle
             }
             doc.AppendChild(root);
             doc.Save(Environment.CurrentDirectory + "1.xml");
+
+
+            XElement a = XElement.Load(new XmlNodeReader(doc));
+            Battlefield battlefield = new Battlefield() { Placement = a};
+            _db_context.Battlefields.Add(battlefield);
+            _db_context.SaveChanges();
             //root.InnerText = "Test";
             //doc.AppendChild(root);
             //doc.Save(Environment.CurrentDirectory + "1.xml");
@@ -62,15 +76,24 @@ namespace SeaBattle
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            var path = Environment.CurrentDirectory + "1.xml";
+            //var path = Environment.CurrentDirectory + "1.xml";
+            //var doc = new XmlDocument();
+            //doc.Load(path);
+
+            //var root = doc.DocumentElement;
+            // var list = root.GetElementsByTagName("cell");
+
+            var field = _db_context.Battlefields.Where(t => t.Id > 0).ToList()[0];
+            
             var doc = new XmlDocument();
-            doc.Load(path);
+            doc.LoadXml(field.placement);
 
-            var root = doc.DocumentElement;
+             var root = doc.DocumentElement;
+             var list = root.GetElementsByTagName("cell");
 
-            var list = root.GetElementsByTagName("cell");
             foreach (XmlNode node in list)
             {
+                
                 var x = Convert.ToInt32(node.Attributes["x"].Value);
                 var y = Convert.ToInt32(node.Attributes["y"].Value);
                 var state = Convert.ToInt32(node.Attributes["state"].Value);

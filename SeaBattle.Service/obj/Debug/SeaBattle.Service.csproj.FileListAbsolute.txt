@@ -1,0 +1,5 @@
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\bin\Debug\SeaBattle.Service.dll
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\bin\Debug\SeaBattle.Service.pdb
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\obj\Debug\SeaBattle.Service.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\obj\Debug\SeaBattle.Service.dll
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\obj\Debug\SeaBattle.Service.pdb

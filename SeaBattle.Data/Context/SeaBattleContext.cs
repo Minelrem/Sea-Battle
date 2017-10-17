@@ -7,6 +7,7 @@ namespace SeaBattle.Data.Context
     {
         public DbSet<User> Users { get; set; }
         public DbSet<UserAccount> UserAccounts { get; set; }
+        public DbSet<Battlefield> Battlefields { get; set; }
 
         public SeaBattleContext(): base("SeaBattleConnection")
         {
