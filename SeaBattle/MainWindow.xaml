@@ -1,0 +1,32 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeaBattle"
+        xmlns:Controls="clr-namespace:SeaBattle.Controls" x:Class="SeaBattle.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="685"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="330"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Controls:Field HorizontalAlignment="Left" Height="315" Margin="10,10,0,0" VerticalAlignment="Top" Width="315" Grid.Row="0" Grid.Column="0"/>
+        <Controls:Field HorizontalAlignment="Left" Height="315" Margin="10,10,0,0" VerticalAlignment="Top" Width="315" IsEnemy="True"
+                        Grid.Row="0" Grid.Column="1" x:Name="EnemyField"/>
+        <Grid HorizontalAlignment="Left" Height="120" Margin="10,10,0,0" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Width="660">
+            <Button x:Name="button" Content="Save to XML" HorizontalAlignment="Left" Margin="12,9,0,0" VerticalAlignment="Top" Width="99" Click="button_Click"/>
+            <Button x:Name="button1" Content="Load from XML" HorizontalAlignment="Left" Margin="12,35,0,0" VerticalAlignment="Top" Width="99" Click="button1_Click"/>
+        </Grid>
+
+
+    </Grid>
+</Window>
