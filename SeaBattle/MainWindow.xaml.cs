@@ -13,10 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
-using SeaBattle.Controls;
-using SeaBattle.Data.Context;
-using SeaBattle.Data.Model;
+using SeaBattle.Controls; 
 using System.Xml.Linq;
+using SeaBattle.Service;
 
 namespace SeaBattle
 {
@@ -25,82 +24,55 @@ namespace SeaBattle
     /// </summary>
     public partial class MainWindow : Window
     {
-
-       private static SeaBattleContext _db_context = new SeaBattleContext();
+ 
 
         public MainWindow()
         {
-            InitializeComponent();
- 
-
+            InitializeComponent(); 
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            var doc = new XmlDocument();
-            var root = doc.CreateElement("field");
+
+            int size = EnemyField.Size;
+
+            List<Tuple<int, int,int>> tmp = new List<Tuple<int, int,int>>();
+
             for (int i = 0; i < EnemyField.Size; i++)
             {
+                int x , y ,state;
+
                 for (int j = 0; j < EnemyField.Size; j++)
                 {
                     var cell = EnemyField[i, j];
-                    var node = doc.CreateElement("cell");
 
-                    var xAttr = doc.CreateAttribute("x");
-                    xAttr.InnerText = (cell.X - 1).ToString();
+                    x = (cell.X - 1);
 
-                    var yAttr = doc.CreateAttribute("y");
-                    yAttr.InnerText = (cell.Y - 1).ToString();
+                    y = (cell.Y - 1);
 
-                    var stateAttr = doc.CreateAttribute("state");
-                    stateAttr.InnerText = (cell.State == CellState.Missed ? (int)CellState.Ship : (int)CellState.None).ToString();
+                    state = (cell.State == CellState.Missed ? (int)CellState.Ship : (int)CellState.None);
 
-                    node.Attributes.Append(xAttr);
-                    node.Attributes.Append(yAttr);
-                    node.Attributes.Append(stateAttr);
-                    root.AppendChild(node);
+                    tmp.Add(Tuple.Create(x, y, state));
                 }
+
             }
-            doc.AppendChild(root);
-            doc.Save(Environment.CurrentDirectory + "1.xml");
 
-
-            XElement a = XElement.Load(new XmlNodeReader(doc));
-            Battlefield battlefield = new Battlefield() { Placement = a};
-            _db_context.Battlefields.Add(battlefield);
-            _db_context.SaveChanges();
-            //root.InnerText = "Test";
-            //doc.AppendChild(root);
-            //doc.Save(Environment.CurrentDirectory + "1.xml");
+         
+           UnitOfWork.Instance.BattlefieldService.SaveToXML(tmp,size); 
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            //var path = Environment.CurrentDirectory + "1.xml";
-            //var doc = new XmlDocument();
-            //doc.Load(path);
+             
+            var res = UnitOfWork.Instance.BattlefieldService.LoadFromXML();
 
-            //var root = doc.DocumentElement;
-            // var list = root.GetElementsByTagName("cell");
-
-            var field = _db_context.Battlefields.Where(t => t.Id > 0).ToList()[0];
-            
-            var doc = new XmlDocument();
-            doc.LoadXml(field.placement);
-
-             var root = doc.DocumentElement;
-             var list = root.GetElementsByTagName("cell");
-
-            foreach (XmlNode node in list)
+            foreach (Tuple<int,int,int> tmp in res)
             {
                 
-                var x = Convert.ToInt32(node.Attributes["x"].Value);
-                var y = Convert.ToInt32(node.Attributes["y"].Value);
-                var state = Convert.ToInt32(node.Attributes["state"].Value);
-                var cell = EnemyField[y, x];
-                cell.X = x;
-                cell.Y = y;
-                cell.State = (CellState)state;
+                var cell = EnemyField[tmp.Item2, tmp.Item1];
+                cell.X = tmp.Item1;
+                cell.Y = tmp.Item2;
+                cell.State = (CellState)tmp.Item3;
             }
         }
     }

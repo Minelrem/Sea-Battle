@@ -1,10 +1,16 @@
 C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe.config
 C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\SeaBattle.exe
 C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\SeaBattle.pdb
+C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\SeaBattle.Service.dll
 C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\SeaBattle.Data.dll
+C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\SeaBattle.Service.pdb
+C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\SeaBattle.Service.dll.config
+C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\SeaBattle.Data.pdb
 C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\SeaBattle.Data.dll.config
-C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\EntityFramework.xml
 C:\Users\User\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\SeaBattle\SeaBattle\obj\Debug\Controls\Cell.g.cs
 C:\Users\User\Desktop\SeaBattle\SeaBattle\obj\Debug\Controls\Field.g.cs
@@ -21,6 +27,3 @@ C:\Users\User\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.Properties.Resourc
 C:\Users\User\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.GenerateResource.Cache
 C:\Users\User\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.exe
 C:\Users\User\Desktop\SeaBattle\SeaBattle\obj\Debug\SeaBattle.pdb
-C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\EntityFramework.dll
-C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\User\Desktop\SeaBattle\SeaBattle\bin\Debug\EntityFramework.SqlServer.xml

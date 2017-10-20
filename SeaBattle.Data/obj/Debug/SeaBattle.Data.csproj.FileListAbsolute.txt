@@ -5,6 +5,5 @@ C:\Users\User\Desktop\SeaBattle\SeaBattle.Data\bin\Debug\EntityFramework.dll
 C:\Users\User\Desktop\SeaBattle\SeaBattle.Data\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\User\Desktop\SeaBattle\SeaBattle.Data\bin\Debug\EntityFramework.xml
 C:\Users\User\Desktop\SeaBattle\SeaBattle.Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\User\Desktop\SeaBattle\SeaBattle.Data\obj\Debug\SeaBattle.Data.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\SeaBattle\SeaBattle.Data\obj\Debug\SeaBattle.Data.dll
 C:\Users\User\Desktop\SeaBattle\SeaBattle.Data\obj\Debug\SeaBattle.Data.pdb

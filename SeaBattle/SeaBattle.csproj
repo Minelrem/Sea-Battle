@@ -116,9 +116,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SeaBattle.Data\SeaBattle.Data.csproj">
-      <Project>{0ebce98e-4cd7-4674-8ea3-ea3e71bc2b5a}</Project>
-      <Name>SeaBattle.Data</Name>
+    <ProjectReference Include="..\SeaBattle.Service\SeaBattle.Service.csproj">
+      <Project>{6EF9415F-E846-48B2-8DE6-A248CE7D0CD0}</Project>
+      <Name>SeaBattle.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,5 +1,15 @@
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\bin\Debug\SeaBattle.Service.dll.config
 C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\bin\Debug\SeaBattle.Service.dll
 C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\bin\Debug\SeaBattle.Service.pdb
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\bin\Debug\SeaBattle.Api.Model.dll
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\bin\Debug\SeaBattle.Data.dll
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\bin\Debug\SeaBattle.Api.Model.pdb
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\bin\Debug\SeaBattle.Data.pdb
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\bin\Debug\SeaBattle.Data.dll.config
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\obj\Debug\SeaBattle.Service.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\obj\Debug\SeaBattle.Service.dll
 C:\Users\User\Desktop\SeaBattle\SeaBattle.Service\obj\Debug\SeaBattle.Service.pdb
